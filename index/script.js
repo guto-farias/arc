@@ -23,7 +23,7 @@ document.getElementById('calculateButton').addEventListener('click', function() 
         if (!ferro) {
 
             //obtem altura consumidas pelas gavetas do espaço interno (somo o que passa com corrediça forte)
-            auxG = gaveta * nGaveta + 0.3
+            auxG = gaveta * nGaveta + 0.9
     
             //obtem vão disponível do interno (subtraio vão padrão de cima sem fogão)
             auxI = (interno - 2) - auxG
@@ -32,12 +32,12 @@ document.getElementById('calculateButton').addEventListener('click', function() 
             vao = auxI / (nGaveta - 1) 
     
             //obtem vão entre ferragens (subtraio tamanho da corrediça forte)
-            result = vao + (gaveta - 3.5)
+            result = vao + (gaveta - 4.4)
     
         } else {
     
-            //obtem altura consumidas pelas gavetas do espaço interno (somo o que passa com corrediça forte)
-            auxG = gaveta * nGaveta + 0.2
+            //obtem altura consumidas pelas gavetas do espaço interno (somo o que passa com corrediça fraca)
+            auxG = gaveta * nGaveta + 0.5
     
             //obtem vão disponível do interno (subtraio vão padrão de cima sem fogão)
             auxI = (interno - 2) - auxG
@@ -46,7 +46,7 @@ document.getElementById('calculateButton').addEventListener('click', function() 
             vao = auxI / (nGaveta - 1) 
     
             //obtem vão entre ferragens (subtraio tamanho da corrediça fraca)
-            result = vao + (gaveta - 2)
+            result = vao + (gaveta - 3.5)
         }
 
     } else {
